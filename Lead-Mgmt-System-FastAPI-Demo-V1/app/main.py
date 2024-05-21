@@ -103,7 +103,8 @@ def read_leads(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), c
 @app.put("/leads/{lead_id}", response_model=schemas.Lead)
 def update_lead(lead_id: int, lead_status: schemas.LeadStatusUpdate, db: Session = Depends(get_db), current_user: schemas.User = Depends(get_current_user)): #current_user: Annotated[schemas.User, Depends(get_current_user)]):
     db_lead = crud.update_lead_owner(db, lead_id, current_user.id)
-    return crud.update_lead_status(db, lead_id, lead_status, current_user.id)
+    lead_status = crud.update_lead_status(db, lead_id, lead_status, current_user.id)
+    return db_lead
 
 # Authenticate user
 @app.post("/token", response_model=schemas.Token)
