@@ -57,7 +57,7 @@ python init_db.py
 ```
 
 #### (Optional) Populate the database with dummy data:
-Use Lead-Mgmt-System-FastAPI-Demo-V1/dummy_data-sqlite3.txt file for dummy data.
+Use `Lead-Mgmt-System-FastAPI-Demo-V1/dummy_data-sqlite3.txt` file for dummy data.
 
 
 ### Start the FastAPI application:
