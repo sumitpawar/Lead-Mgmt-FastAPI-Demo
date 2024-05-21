@@ -1,0 +1,37 @@
+INSERT INTO users (email, hashed_password, is_active, role, availability, firstname, lastname)
+VALUES
+    ('sumit@yopmail.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 1, 'attorney', 1, 'Sumit', 'Raj'),
+    ('meeru@yopmail.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 1, 'attorney', 1, 'Meeru', 'Princess'),
+    ('nachiket@yopmail.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 1, 'attorney', 0, 'Nachiket', 'Counsellor'),
+    ('dhananjay@yopmail.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 1, 'staff', 1, 'Dhananjay', 'Brave'),
+    ('ishaan@yopmail.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 0, 'attorney', 1, 'Ishaan', 'Shlok'),
+    ('admin@yopmail.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW', 0, 'attorney', 1, 'admin', 'root');
+
+-- Insert dummy data into the leads table
+INSERT INTO leads (first_name, last_name, email, resume, owner_id)
+VALUES
+    ('Alice', 'Wonderland', 'alice@yopmail.com', 'Wonderland Resume data. \nFriends with White Rabbit & Mad hatter. \nBeat the Queen of Hearts', 1),
+    ('Genie', 'Aladdin', 'genie@yopmail.com', 'The wise-cracking wish granter with phenomenal cosmic powers (itty bitty living space). ', 2),
+    ('Olaf', 'Frozen', 'olaf@yopmail.com', 'The naive snowman who dreams of summer vacation.', 1),
+    ('Cheshire', 'Cat', 'cheshire@yopmail.com', 'The grinning feline who appears and disappears at will.', 3),
+    ('Queen', 'O''Hearts', 'queen@yopmail.com', 'The hot-tempered monarch known for shouting "off with their heads!" ', 2),
+    ('Mock', 'Turtle', 'mock@yopmail.com', 'A melancholic creature now spends his days sobbing and reminiscing about his schooldays.', 1),
+    ('Tinker', 'Bell', 'tinker@yopmail.com', 'Does not speak much but has plenty of sound effects', 2),
+    ('Baymax', 'Hero6', 'baymax@yopmail.com', 'The inflatable healthcare robot''s huggable design was inspired by a real-life medical robot called "Nursebots"', 3),
+    ('Mushu', 'Mulan', 'mushu@yopmail.com', 'Mushu''s design was inspired by a restaurant placemat depicting Chinese dragons.', 1),
+    ('Rafiki', 'Mandrill', 'rafiki@yopmail.com', 'The wise mandrill''s name means "friend" in Swahili.', 2);
+
+-- Insert dummy data into the lead_statuses table
+INSERT INTO lead_statuses (lead_id, status, attorney_id, created_at, updated_at)
+VALUES
+    (1, 'PENDING', 1, '2023-05-20 10:00:00', '2023-05-20 10:00:00'),
+    (2, 'PENDING', 2, '2023-05-20 11:30:00', '2023-05-20 11:30:00'),
+    (3, 'REACHED_OUT', 1, '2023-05-21 09:15:00', '2023-05-21 14:30:00'),
+    (4, 'PENDING', 3, '2023-05-21 13:45:00', '2023-05-21 13:45:00'),
+    (5, 'REACHED_OUT', 2, '2023-05-22 16:20:00', '2023-05-23 10:10:00'),
+    (6, 'PENDING', 1, '2023-05-23 11:00:00', '2023-05-23 11:00:00'),
+    (7, 'PENDING', 2, '2023-05-23 14:50:00', '2023-05-23 14:50:00'),
+    (8, 'REACHED_OUT', 3, '2023-05-24 08:30:00', '2023-05-24 11:45:00'),
+    (9, 'PENDING', 1, '2023-05-24 12:20:00', '2023-05-24 12:20:00'),
+    (10, 'PENDING', 2, '2023-05-25 09:40:00', '2023-05-25 09:40:00');
+

@@ -1,0 +1,22 @@
+
+
+a) activate python environment in terminal:
+# python3.9 -m venv fastapi
+source fastapi/bin/activate
+
+b) Install SQLite3 library:
+pip install sqlite3
+
+c) The first step is to install FastAPI:
+fastapi/bin/python -m pip install --upgrade pip
+fastapi/bin/pip install fastapi sqlalchemy passlib python-jose python-multipart typing
+
+d) requirements file:
+ # pip freeze > requirements.txt
+  pip install -r requirements.txt
+
+e) uvicorn main:app --reload --port 8000
+
+f) for generating SECRET_KEY, execute in terminal
+    openssl rand -hex 32
+
